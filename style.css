@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #0b131e;
+}
+
+.header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+
+  form {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    input,
+    button {
+      padding: 10px;
+      background-color: #202b3b;
+      border: none;
+      color: white;
+      border-radius: 10px;
+    }
+
+    input {
+      height: 60%;
+      width: 80%;
+    }
+
+    button {
+      height: 60%;
+      width: 20%;
+      cursor: pointer;
+    }
+  }
+
+  .date,
+  .time {
+    font-size: 0.8rem;
+    text-align: right;
+  }
+}
+
+.app_holder {
+  height: 88%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .left {
+    height: 100%;
+    width: 65%;
+  }
+
+  .right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+.main {
+  height: 25%;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_container {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  .city_name {
+    font-size: 3rem;
+  }
+
+  .temperature {
+    font-size: 2rem;
+    color: gray;
+  }
+
+  .temp_desc {
+    color: gray;
+    font-size: 0.8rem;
+  }
+}
+
+.right_container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.65rem;
+  padding: 10px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .last_updated {
+    margin-bottom: 10px;
+  }
+}
+
+.todays_forecast {
+  height: 30%;
+  width: 100%;
+  margin: 20px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+
+  .box_container {
+    height: 90%;
+    width: 100%;
+    background-color: #202b3b;
+    border-radius: 10px;
+    padding: 8px 30px;
+    font-size: 0.7rem;
+
+    .heading {
+      font-weight: 600;
+      color: gray;
+    }
+
+    .box_holder {
+      height: 90%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .box {
+        height: 80%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.6rem;
+
+        img {
+          height: 55px;
+          width: 80px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .box:not(:first-child) {
+        border-left: 1px solid #dadada;
+      }
+    }
+  }
+}
+
+.more_info {
+  height: 40%;
+  width: 100%;
+  margin: -20px 20px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+
+  .box_container {
+    height: 90%;
+    width: 100%;
+    background-color: #202b3b;
+    border-radius: 10px;
+    padding: 8px 30px;
+    font-size: 0.7rem;
+
+    .heading {
+      font-weight: 600;
+      color: gray;
+    }
+
+    .box_holder {
+      height: 90%;
+      width: 100%;
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+
+      .box {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.6rem;
+
+        .heading_data {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.right {
+  .daily_weather {
+    height: 95%;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #202b3b;
+    font-size: 0.8rem;
+
+    .heading {
+      width: 100%;
+      padding: 20px 30px;
+      text-align: left;
+    }
+
+    .box {
+      height: 12.5%;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border-top: 1px solid #dadada;
+
+      .day,
+      .min_max,
+      .condition {
+        height: auto;
+        width: 100%;
+        font-size: 0.65rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .condition {
+        flex-direction: column;
+        img {
+          height: 30px;
+          width: 30px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .box.one {
+      border-top: none;
+    }
+  }
+}
