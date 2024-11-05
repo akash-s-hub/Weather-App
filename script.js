@@ -1,6 +1,6 @@
 let form = document.querySelector(".search-form");
 let searchInput = document.querySelector("#search-box");
-const api_key = 'a5afc3b297msh0d43716776f5537p16cd98jsnde56fe4e0ce4'
+const api_key = '5b2500633dmshda11831f68ff74cp1ee8f4jsnf716350e7b4b'
 const baseURL = 'https://weatherapi-com.p.rapidapi.com/forecast.json';
 
 
